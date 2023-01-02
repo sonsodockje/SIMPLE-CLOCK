@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>집중하걸아</title>
+    <link rel="stylesheet" href="style.css">
+
+<body>
+    <div class="contain">
+        <div class="clock">
+            <div class="clock-main">
+                <div class="clock-main-text">
+                    <p>
+                        <span class="hour"></span>
+                        <span>:</span>
+                        <span class="min"></span>
+                        <span class="small-text"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let Hour = document.querySelector(".hour");
+        let Min = document.querySelector(".min");
+        let Sec = document.querySelector(".small-text");
+
+        function getTime() {
+            let time = new Date();
+            let hour = time.getHours();
+            let minutes = time.getMinutes();
+            let sec = time.getSeconds()
+
+            if (hour > 12) {
+                hour = hour - 12;
+            }
+
+            if (hour < 10) {
+                hour = "0" + hour;
+            }
+
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+
+            if (sec < 10) {
+                sec = "0" + sec;
+            }
+
+            Hour.innerHTML = hour
+            Min.innerHTML = minutes
+            Sec.innerHTML = sec
+        }
+
+        getTime();
+        setInterval(getTime, 1000); 
+    </script>
+</body>
+
+
+</html>

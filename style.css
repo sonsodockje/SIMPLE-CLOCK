@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Russo One", sans-serif;
+}
+
+.clock {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+.clock-main {
+  margin: auto;
+  color: aliceblue;
+  border-radius: 3rem;
+  align-items: baseline;
+}
+.clock-main-text {
+  transition: all 0.6s;
+  font-size: 15rem;
+  letter-spacing: 12px;
+}
+.clock-main-text .small-text {
+  font-size: 1.5rem;
+  position: fixed;
+  margin-left: 10px;
+  margin-top: 200px;
+  letter-spacing: 0px;
+}/*# sourceMappingURL=style.css.map */
